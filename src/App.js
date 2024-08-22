@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import About from './components/About';
+import Contact from './components/Contact';
+import DesignCatalog from './components/DesignCatalog';
+import Header from './components/Header';
+import Login from './components/LoginPage';
+import DemountableBuilder from './views/demountableBuilder';
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  const handleLogin = (userData) => {
+    setUser(userData);
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Header isLoggedIn={!!user} onLogout={handleLogout} />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/customize/:designId" element={<DemountableBuilder />} />
+            <Route path="/login" element={<Login onLogin={handleLogin} />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/" element={<DesignCatalog />} />
+            {/* Add other routes as needed */}
+          </Routes>
+        </main>
+      </div>
+    </Router>
   );
 }
 

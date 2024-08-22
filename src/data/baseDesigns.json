@@ -1,0 +1,66 @@
+[
+    {
+      "id": "laundry-12x3",
+      "name": "12.0x3.0 Laundry",
+      "type": "laundry",
+      "dimensions": {
+        "length": 12000,
+        "width": 3000,
+        "height": 2400
+      },
+      "features": {
+        "washingMachines": 6,
+        "dryers": 6,
+        "laundryTrough": 1,
+        "ironingStation": 1
+      },
+      "material": "steel",
+      "roofStyle": "flat",
+      "thumbnail": "/images/designs/12.0x3.0-laundry.png",
+      "description": "Spacious laundry facility with 6 washing machines and 6 dryers."
+    },
+    {
+      "id": "gym-12x9",
+      "name": "12.0x9.0 Gym",
+      "type": "gym",
+      "dimensions": {
+        "length": 12000,
+        "width": 9000,
+        "height": 2400
+      },
+      "features": {
+        "treadmills": 3,
+        "weightBenches": 2,
+        "spinBikes": 2,
+        "crossTrainers": 2,
+        "rwb": 1
+      },
+      "material": "steel",
+      "roofStyle": "flat",
+      "thumbnail": "/images/designs/12.0x9.0-gym.png",
+      "description": "Fully equipped gym with cardio and strength training areas."
+    },
+    {
+      "id": "duplex-bunkhouse-14.4x3.3",
+      "name": "14.4x3.3 Duplex Bunkhouse",
+      "type": "accommodation",
+      "dimensions": {
+        "length": 14400,
+        "width": 3300,
+        "height": 2400
+      },
+      "features": {
+        "bedrooms": 2,
+        "bathrooms": 2,
+        "kitchenettes": 2,
+        "lounges": 2,
+        "tvs": 2,
+        "fridges": 2,
+        "robes": 2
+      },
+      "material": "steel",
+      "roofStyle": "gable",
+      "thumbnail": "/images/designs/14.4x3.3-duplex-bunkhouse.png",
+      "description": "Duplex bunkhouse with two separate living areas, each including a bedroom, bathroom, kitchenette, and lounge."
+    }
+  ]
