@@ -1,0 +1,40 @@
+{
+  "basePrices": {
+    "laundry": 45000,
+    "gym": 75000,
+    "accommodation": 85000
+  },
+  "pricePerSquareMeter": 850,
+  "features": {
+    "washingMachines": 1200,
+    "dryers": 1100,
+    "laundryTrough": 450,
+    "ironingStation": 350,
+    "treadmills": 2500,
+    "weightBenches": 800,
+    "spinBikes": 1500,
+    "crossTrainers": 2200,
+    "rwb": 1800,
+    "bedrooms": 8500,
+    "bathrooms": 12000,
+    "kitchenettes": 5500,
+    "lounges": 4000,
+    "tvs": 800,
+    "fridges": 1200,
+    "robes": 600
+  },
+  "materials": {
+    "steel": 0,
+    "wood": 5000
+  },
+  "roofStyles": {
+    "flat": 0,
+    "gable": 3500,
+    "skillion": 2800
+  },
+  "baseAreaThresholds": {
+    "laundry": 36,
+    "gym": 108,
+    "accommodation": 47.52
+  }
+}
