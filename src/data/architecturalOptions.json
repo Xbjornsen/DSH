@@ -1,0 +1,80 @@
+{
+  "windows": {
+    "name": "Windows",
+    "options": [
+      { "id": "standard", "label": "Standard Window (900x1200mm)", "price": 450 },
+      { "id": "large", "label": "Large Window (1200x1500mm)", "price": 650 },
+      { "id": "sliding", "label": "Sliding Window (1800x1200mm)", "price": 850 }
+    ]
+  },
+  "doors": {
+    "name": "Doors",
+    "options": [
+      { "id": "standard", "label": "Standard Door (820x2040mm)", "price": 550 },
+      { "id": "double", "label": "Double Door (1640x2040mm)", "price": 950 },
+      { "id": "sliding", "label": "Sliding Glass Door (2100x2040mm)", "price": 1250 }
+    ]
+  },
+  "verandahs": {
+    "name": "Verandahs & Decks",
+    "options": [
+      { "id": "small", "label": "Small Verandah (3m x 2m)", "price": 2500 },
+      { "id": "medium", "label": "Medium Verandah (6m x 2m)", "price": 4500 },
+      { "id": "large", "label": "Large Verandah (12m x 2m)", "price": 7500 },
+      { "id": "deck", "label": "Timber Deck (per sqm)", "price": 350 }
+    ]
+  },
+  "airConditioning": {
+    "name": "Air Conditioning",
+    "options": [
+      { "id": "split-2.5kw", "label": "Split System 2.5kW", "price": 1800 },
+      { "id": "split-5kw", "label": "Split System 5kW", "price": 2800 },
+      { "id": "split-7kw", "label": "Split System 7kW", "price": 3500 },
+      { "id": "ducted", "label": "Ducted System", "price": 8500 }
+    ]
+  },
+  "insulation": {
+    "name": "Insulation",
+    "options": [
+      { "id": "standard", "label": "Standard Insulation (R2.5)", "price": 1500 },
+      { "id": "premium", "label": "Premium Insulation (R4.0)", "price": 2500 },
+      { "id": "acoustic", "label": "Acoustic Insulation", "price": 3200 }
+    ]
+  },
+  "flooring": {
+    "name": "Flooring",
+    "options": [
+      { "id": "vinyl", "label": "Vinyl Flooring", "price": 65 },
+      { "id": "carpet", "label": "Carpet", "price": 55 },
+      { "id": "timber", "label": "Timber Laminate", "price": 85 },
+      { "id": "tiles", "label": "Ceramic Tiles", "price": 95 }
+    ]
+  },
+  "colors": {
+    "name": "Paint & Colors",
+    "options": [
+      { "id": "standard-white", "label": "Standard White", "price": 0 },
+      { "id": "colorbond", "label": "Colorbond Exterior", "price": 1500 },
+      { "id": "custom-interior", "label": "Custom Interior Paint", "price": 2200 },
+      { "id": "full-custom", "label": "Full Custom Color Scheme", "price": 3500 }
+    ]
+  },
+  "electrical": {
+    "name": "Electrical Upgrades",
+    "options": [
+      { "id": "standard", "label": "Standard Package (included)", "price": 0 },
+      { "id": "upgraded", "label": "Upgraded Package (extra outlets & lighting)", "price": 1200 },
+      { "id": "premium", "label": "Premium Package (LED, dimmers, USB outlets)", "price": 2500 },
+      { "id": "solar", "label": "Solar Panel System (3kW)", "price": 5500 }
+    ]
+  },
+  "security": {
+    "name": "Security Features",
+    "options": [
+      { "id": "locks", "label": "Security Locks", "price": 450 },
+      { "id": "alarm", "label": "Alarm System", "price": 1200 },
+      { "id": "cameras", "label": "Security Cameras (4x)", "price": 2200 },
+      { "id": "full", "label": "Full Security Package", "price": 3500 }
+    ]
+  }
+}

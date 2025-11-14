@@ -14,6 +14,17 @@ function useDemountableConfig() {
         ...design,
         material: design.material || 'steel',
         roofStyle: design.roofStyle || 'flat',
+        addOns: design.addOns || {
+          windows: [],
+          doors: [],
+          verandahs: [],
+          airConditioning: [],
+          insulation: null,
+          flooring: null,
+          colors: 'standard-white',
+          electrical: 'standard',
+          security: []
+        }
       });
     } catch (error) {
       console.error('Error initializing demountable:', error);
@@ -46,13 +57,24 @@ function useDemountableConfig() {
     setDemountable(prev => ({ ...prev, roofStyle }));
   };
 
-  return { 
-    demountable, 
-    updateDemountable, 
-    updateDimensions, 
-    updateFeatures, 
-    updateMaterial, 
-    updateRoofStyle 
+  const updateAddOns = (category, value) => {
+    setDemountable(prev => ({
+      ...prev,
+      addOns: {
+        ...prev.addOns,
+        [category]: value
+      }
+    }));
+  };
+
+  return {
+    demountable,
+    updateDemountable,
+    updateDimensions,
+    updateFeatures,
+    updateMaterial,
+    updateRoofStyle,
+    updateAddOns
   };
 }
 
