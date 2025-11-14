@@ -196,15 +196,88 @@ function ArchitecturalAddOns({ demountable, updateAddOns }) {
           </select>
         </div>
 
-        {/* Colors */}
+        {/* Exterior Colors */}
         <div className="border-b pb-3">
           <h4 className="font-medium text-gray-700 mb-2">{architecturalOptions.colors.name}</h4>
+          <div className="grid grid-cols-3 gap-2 mt-2">
+            {architecturalOptions.colors.options.map(option => (
+              <button
+                key={option.id}
+                onClick={() => updateAddOns('colors', option.id)}
+                className={`flex flex-col items-center p-2 rounded border-2 transition-all ${
+                  demountable.addOns.colors === option.id
+                    ? 'border-blue-500 bg-blue-50'
+                    : 'border-gray-300 hover:border-gray-400'
+                }`}
+              >
+                {option.color && (
+                  <div
+                    className="w-full h-8 rounded mb-1 border border-gray-300"
+                    style={{ backgroundColor: option.color }}
+                  />
+                )}
+                <span className="text-xs text-center text-gray-700">{option.label}</span>
+                {option.price > 0 && (
+                  <span className="text-xs text-olive-600 font-medium">+${option.price}</span>
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Interior Colors */}
+        <div className="border-b pb-3">
+          <h4 className="font-medium text-gray-700 mb-2">{architecturalOptions.interiorColors.name}</h4>
           <select
-            value={demountable.addOns.colors || 'standard-white'}
-            onChange={(e) => updateAddOns('colors', e.target.value)}
+            value={demountable.addOns.interiorColors || 'standard-white'}
+            onChange={(e) => updateAddOns('interiorColors', e.target.value)}
             className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
           >
-            {architecturalOptions.colors.options.map(option => (
+            {architecturalOptions.interiorColors.options.map(option => (
+              <option key={option.id} value={option.id}>{option.label}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* Bathrooms */}
+        <div className="border-b pb-3">
+          <h4 className="font-medium text-gray-700 mb-2">{architecturalOptions.bathrooms.name}</h4>
+          <div className="space-y-2">
+            {architecturalOptions.bathrooms.options.map(option => (
+              <div key={option.id} className="flex items-center justify-between">
+                <label className="text-sm text-gray-600">{option.label}</label>
+                <div className="flex items-center space-x-2">
+                  <button
+                    onClick={() => handleArrayRemove('bathrooms', option.id)}
+                    className="px-2 py-1 bg-gray-200 hover:bg-gray-300 rounded text-sm"
+                    disabled={getQuantity('bathrooms', option.id) === 0}
+                  >
+                    -
+                  </button>
+                  <span className="w-8 text-center text-sm font-medium">
+                    {getQuantity('bathrooms', option.id)}
+                  </span>
+                  <button
+                    onClick={() => handleArrayAddOn('bathrooms', option.id)}
+                    className="px-2 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded text-sm"
+                  >
+                    +
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Stormwater & Drainage */}
+        <div className="border-b pb-3">
+          <h4 className="font-medium text-gray-700 mb-2">{architecturalOptions.stormwater.name}</h4>
+          <select
+            value={demountable.addOns.stormwater || 'basic-gutters'}
+            onChange={(e) => updateAddOns('stormwater', e.target.value)}
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+          >
+            {architecturalOptions.stormwater.options.map(option => (
               <option key={option.id} value={option.id}>{option.label}</option>
             ))}
           </select>

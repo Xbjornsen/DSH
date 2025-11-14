@@ -51,12 +51,45 @@
     ]
   },
   "colors": {
-    "name": "Paint & Colors",
+    "name": "Exterior Color",
+    "options": [
+      { "id": "surfmist", "label": "Surfmist (Off-white)", "price": 0, "color": "#F0EFEA" },
+      { "id": "shale-grey", "label": "Shale Grey", "price": 0, "color": "#A4A9AD" },
+      { "id": "woodland-grey", "label": "Woodland Grey", "price": 0, "color": "#4D4D4D" },
+      { "id": "monument", "label": "Monument", "price": 0, "color": "#232426" },
+      { "id": "classic-cream", "label": "Classic Cream", "price": 0, "color": "#E8DCC4" },
+      { "id": "pale-eucalypt", "label": "Pale Eucalypt", "price": 0, "color": "#8A9B7D" },
+      { "id": "wilderness", "label": "Wilderness", "price": 0, "color": "#626E60" },
+      { "id": "windspray", "label": "Windspray", "price": 0, "color": "#E0E8E8" },
+      { "id": "custom-colorbond", "label": "Custom Colorbond Color", "price": 1500, "color": null }
+    ]
+  },
+  "interiorColors": {
+    "name": "Interior Paint",
     "options": [
       { "id": "standard-white", "label": "Standard White", "price": 0 },
-      { "id": "colorbond", "label": "Colorbond Exterior", "price": 1500 },
-      { "id": "custom-interior", "label": "Custom Interior Paint", "price": 2200 },
-      { "id": "full-custom", "label": "Full Custom Color Scheme", "price": 3500 }
+      { "id": "warm-neutral", "label": "Warm Neutral Tones", "price": 1200 },
+      { "id": "feature-walls", "label": "Feature Walls (2 colors)", "price": 1800 },
+      { "id": "full-custom", "label": "Full Custom Interior Scheme", "price": 3500 }
+    ]
+  },
+  "bathrooms": {
+    "name": "Bathroom Additions",
+    "options": [
+      { "id": "standard", "label": "Standard Bathroom (Toilet, Shower, Basin)", "price": 12000 },
+      { "id": "deluxe", "label": "Deluxe Bathroom (Includes Bath)", "price": 15500 },
+      { "id": "ensuite", "label": "Ensuite (Compact)", "price": 10500 },
+      { "id": "accessible", "label": "Accessible Bathroom (Disability compliant)", "price": 14500 }
+    ]
+  },
+  "stormwater": {
+    "name": "Stormwater & Drainage",
+    "options": [
+      { "id": "basic-gutters", "label": "Gutters & Downpipes (included)", "price": 0 },
+      { "id": "extended-drainage", "label": "Extended Drainage System", "price": 2500 },
+      { "id": "stormwater-tank", "label": "Stormwater Collection Tank (1000L)", "price": 3200 },
+      { "id": "stormwater-tank-large", "label": "Stormwater Collection Tank (5000L)", "price": 5500 },
+      { "id": "full-drainage", "label": "Full Drainage System with Soak Pits", "price": 4800 }
     ]
   },
   "electrical": {

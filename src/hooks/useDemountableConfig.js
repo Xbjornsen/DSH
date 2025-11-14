@@ -21,7 +21,10 @@ function useDemountableConfig() {
           airConditioning: [],
           insulation: null,
           flooring: null,
-          colors: 'standard-white',
+          colors: 'surfmist',
+          interiorColors: 'standard-white',
+          bathrooms: [],
+          stormwater: 'basic-gutters',
           electrical: 'standard',
           security: []
         }

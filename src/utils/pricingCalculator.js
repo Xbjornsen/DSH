@@ -59,8 +59,8 @@ export const calculatePrice = (demountable) => {
   if (demountable.addOns) {
     const area = (demountable.dimensions.length / 1000) * (demountable.dimensions.width / 1000);
 
-    // Array-based add-ons (windows, doors, verandahs, airConditioning, security)
-    ['windows', 'doors', 'verandahs', 'airConditioning', 'security'].forEach(category => {
+    // Array-based add-ons (windows, doors, verandahs, airConditioning, bathrooms, security)
+    ['windows', 'doors', 'verandahs', 'airConditioning', 'bathrooms', 'security'].forEach(category => {
       const items = demountable.addOns[category] || [];
       items.forEach(item => {
         const option = architecturalOptions[category]?.options.find(opt => opt.id === item.id);
@@ -78,8 +78,8 @@ export const calculatePrice = (demountable) => {
       });
     });
 
-    // Single-select add-ons (insulation, colors, electrical)
-    ['insulation', 'colors', 'electrical'].forEach(category => {
+    // Single-select add-ons (insulation, colors, interiorColors, stormwater, electrical)
+    ['insulation', 'colors', 'interiorColors', 'stormwater', 'electrical'].forEach(category => {
       const selectedId = demountable.addOns[category];
       if (selectedId) {
         const option = architecturalOptions[category]?.options.find(opt => opt.id === selectedId);
