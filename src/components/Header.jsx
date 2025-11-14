@@ -16,8 +16,9 @@ function Header({ isLoggedIn, onLogout }) {
     </Link>
         <nav>
           <ul className="flex space-x-4">
+            <li><Link to="/" className="hover:text-orange-400">Catalog</Link></li>
+            <li><Link to="/space-builder" className="hover:text-orange-400">3D Builder</Link></li>
             <li><Link to="/about" className="hover:text-orange-400">About</Link></li>
-            <li><Link to="/services" className="hover:text-orange-400">Services</Link></li>
             <li><Link to="/contact" className="hover:text-orange-400">Contact</Link></li>
             {isLoggedIn ? (
               <li><button onClick={onLogout} className="bg-orange-500 hover:bg-orange-600 px-3 py-1 rounded">Logout</button></li>

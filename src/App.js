@@ -6,6 +6,7 @@ import DesignCatalog from './components/DesignCatalog';
 import Header from './components/Header';
 import Login from './components/LoginPage';
 import DemountableBuilder from './views/demountableBuilder';
+import SpaceBuilder from './views/SpaceBuilder';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -24,12 +25,12 @@ function App() {
         <Header isLoggedIn={!!user} onLogout={handleLogout} />
         <main className="flex-grow">
           <Routes>
+            <Route path="/space-builder" element={<SpaceBuilder />} />
             <Route path="/customize/:designId" element={<DemountableBuilder />} />
             <Route path="/login" element={<Login onLogin={handleLogin} />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/" element={<DesignCatalog />} />
-            {/* Add other routes as needed */}
           </Routes>
         </main>
       </div>

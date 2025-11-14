@@ -1,0 +1,210 @@
+[
+  {
+    "id": "table-standard",
+    "name": "Standard Table",
+    "type": "table",
+    "category": "furniture",
+    "dimensions": {
+      "length": 1500,
+      "width": 800,
+      "height": 750
+    },
+    "color": "#8B4513",
+    "description": "Standard dining or work table"
+  },
+  {
+    "id": "chair-office",
+    "name": "Office Chair",
+    "type": "chair",
+    "category": "furniture",
+    "dimensions": {
+      "length": 500,
+      "width": 500,
+      "height": 500
+    },
+    "color": "#4169E1",
+    "description": "Ergonomic office chair"
+  },
+  {
+    "id": "bed-single",
+    "name": "Single Bed",
+    "type": "bed",
+    "category": "furniture",
+    "dimensions": {
+      "length": 2000,
+      "width": 1000,
+      "height": 500
+    },
+    "color": "#DC143C",
+    "description": "Standard single bed"
+  },
+  {
+    "id": "bed-double",
+    "name": "Double Bed",
+    "type": "bed",
+    "category": "furniture",
+    "dimensions": {
+      "length": 2000,
+      "width": 1500,
+      "height": 500
+    },
+    "color": "#DC143C",
+    "description": "Standard double bed"
+  },
+  {
+    "id": "desk-office",
+    "name": "Office Desk",
+    "type": "desk",
+    "category": "furniture",
+    "dimensions": {
+      "length": 1200,
+      "width": 600,
+      "height": 750
+    },
+    "color": "#8B4513",
+    "description": "Standard office desk"
+  },
+  {
+    "id": "cabinet-storage",
+    "name": "Storage Cabinet",
+    "type": "cabinet",
+    "category": "furniture",
+    "dimensions": {
+      "length": 800,
+      "width": 500,
+      "height": 1500
+    },
+    "color": "#2F4F4F",
+    "description": "Multi-shelf storage cabinet"
+  },
+  {
+    "id": "sofa-2seater",
+    "name": "2-Seater Sofa",
+    "type": "sofa",
+    "category": "furniture",
+    "dimensions": {
+      "length": 1600,
+      "width": 800,
+      "height": 800
+    },
+    "color": "#696969",
+    "description": "Comfortable 2-seater sofa"
+  },
+  {
+    "id": "washing-machine",
+    "name": "Washing Machine",
+    "type": "appliance",
+    "category": "laundry",
+    "dimensions": {
+      "length": 600,
+      "width": 600,
+      "height": 850
+    },
+    "color": "#FFFFFF",
+    "description": "Front-loading washing machine"
+  },
+  {
+    "id": "dryer",
+    "name": "Dryer",
+    "type": "appliance",
+    "category": "laundry",
+    "dimensions": {
+      "length": 600,
+      "width": 600,
+      "height": 850
+    },
+    "color": "#F5F5F5",
+    "description": "Front-loading dryer"
+  },
+  {
+    "id": "treadmill",
+    "name": "Treadmill",
+    "type": "equipment",
+    "category": "gym",
+    "dimensions": {
+      "length": 2000,
+      "width": 800,
+      "height": 1400
+    },
+    "color": "#000000",
+    "description": "Electric treadmill"
+  },
+  {
+    "id": "weight-bench",
+    "name": "Weight Bench",
+    "type": "equipment",
+    "category": "gym",
+    "dimensions": {
+      "length": 1500,
+      "width": 600,
+      "height": 500
+    },
+    "color": "#1C1C1C",
+    "description": "Adjustable weight bench"
+  },
+  {
+    "id": "refrigerator",
+    "name": "Refrigerator",
+    "type": "appliance",
+    "category": "kitchen",
+    "dimensions": {
+      "length": 700,
+      "width": 700,
+      "height": 1800
+    },
+    "color": "#E5E5E5",
+    "description": "Standard refrigerator"
+  },
+  {
+    "id": "kitchen-counter",
+    "name": "Kitchen Counter",
+    "type": "counter",
+    "category": "kitchen",
+    "dimensions": {
+      "length": 2000,
+      "width": 600,
+      "height": 900
+    },
+    "color": "#D3D3D3",
+    "description": "Kitchen counter with storage"
+  },
+  {
+    "id": "shower-booth",
+    "name": "Shower Booth",
+    "type": "fixture",
+    "category": "bathroom",
+    "dimensions": {
+      "length": 900,
+      "width": 900,
+      "height": 2000
+    },
+    "color": "#E0E0E0",
+    "description": "Glass shower enclosure"
+  },
+  {
+    "id": "toilet",
+    "name": "Toilet",
+    "type": "fixture",
+    "category": "bathroom",
+    "dimensions": {
+      "length": 500,
+      "width": 400,
+      "height": 400
+    },
+    "color": "#FFFFFF",
+    "description": "Standard toilet"
+  },
+  {
+    "id": "sink-bathroom",
+    "name": "Bathroom Sink",
+    "type": "fixture",
+    "category": "bathroom",
+    "dimensions": {
+      "length": 600,
+      "width": 450,
+      "height": 200
+    },
+    "color": "#FFFFFF",
+    "description": "Wall-mounted bathroom sink"
+  }
+]
