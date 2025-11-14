@@ -3,11 +3,12 @@ import Toolset from '../components/Toolset';
 import Visualization from '../components/Visualization';
 import TableOfContents from '../components/TableOfContents';
 import PricingPanel from '../components/PricingPanel';
+import ArchitecturalAddOns from '../components/ArchitecturalAddOns';
 import baseDesigns from '../data/baseDesigns.json';
 import useDemountableConfig from '../hooks/useDemountableConfig';
 
 function DemountableBuilder() {
-    const { demountable, updateDemountable, updateDimensions, updateFeatures, updateMaterial, updateRoofStyle } = useDemountableConfig();
+    const { demountable, updateDemountable, updateDimensions, updateFeatures, updateMaterial, updateRoofStyle, updateAddOns } = useDemountableConfig();
     const [selectedDesignId, setSelectedDesignId] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -98,6 +99,14 @@ function DemountableBuilder() {
             updateMaterial={updateMaterial}
             updateRoofStyle={updateRoofStyle}
           />
+
+          {/* Architectural Add-Ons Section */}
+          <div className="mt-4">
+            <ArchitecturalAddOns
+              demountable={demountable}
+              updateAddOns={updateAddOns}
+            />
+          </div>
 
           {/* Pricing Section */}
           <div id="pricing" className="mt-4">

@@ -6,7 +6,8 @@ function TableOfContents({ activeSection, onSectionClick }) {
     { id: 'dimensions', label: '2. Dimensions', icon: '📏' },
     { id: 'features', label: '3. Features', icon: '⚙️' },
     { id: 'materials', label: '4. Materials & Roof', icon: '🔧' },
-    { id: 'pricing', label: '5. Pricing', icon: '💰' }
+    { id: 'addons', label: '5. Add-Ons', icon: '🏠' },
+    { id: 'pricing', label: '6. Pricing', icon: '💰' }
   ];
 
   return (

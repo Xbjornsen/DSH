@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
 import { calculatePrice, formatCurrency } from '../utils/pricingCalculator';
 
 function PricingPanel({ demountable }) {
   const pricing = calculatePrice(demountable);
+  const { addToCart } = useCart();
+  const navigate = useNavigate();
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  const handleAddToCart = () => {
+    addToCart(demountable, pricing);
+    setShowSuccess(true);
+    setTimeout(() => setShowSuccess(false), 3000);
+  };
 
   if (!pricing) {
     return (
@@ -70,6 +81,30 @@ function PricingPanel({ demountable }) {
           </div>
         )}
 
+        {/* Add-Ons */}
+        {pricing.addOnsBreakdown.length > 0 && (
+          <div className="border-b pb-3">
+            <div className="font-medium text-gray-700 mb-2">Architectural Add-Ons</div>
+            <div className="space-y-1 ml-3">
+              {pricing.addOnsBreakdown.map((addon, index) => (
+                <div key={index} className="flex justify-between items-center text-sm">
+                  <span className="text-gray-600">
+                    {addon.name} × {addon.quantity}
+                    <span className="text-xs text-gray-400 ml-1">
+                      (@{formatCurrency(addon.unitPrice)})
+                    </span>
+                  </span>
+                  <span className="text-gray-700">{formatCurrency(addon.total)}</span>
+                </div>
+              ))}
+              <div className="flex justify-between items-center font-medium pt-1 border-t">
+                <span className="text-gray-700">Add-Ons Subtotal</span>
+                <span className="text-gray-900">{formatCurrency(pricing.addOnsTotal)}</span>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Material */}
         <div className="flex justify-between items-center">
           <span className="text-gray-700">
@@ -115,6 +150,27 @@ function PricingPanel({ demountable }) {
         {/* Disclaimer */}
         <div className="mt-4 text-xs text-gray-500 italic border-t pt-3">
           * This is an estimate only. Final pricing may vary based on site requirements, delivery location, and installation complexity. Contact us for a detailed quote.
+        </div>
+
+        {/* Add to Cart Button */}
+        <div className="mt-4 space-y-2">
+          <button
+            onClick={handleAddToCart}
+            className="w-full bg-olive-600 hover:bg-olive-700 text-white py-3 rounded-lg font-medium text-lg transition-colors"
+          >
+            Add to Cart
+          </button>
+          {showSuccess && (
+            <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-2 rounded text-center text-sm">
+              ✓ Added to cart successfully!
+            </div>
+          )}
+          <button
+            onClick={() => navigate('/cart')}
+            className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 rounded-lg font-medium transition-colors"
+          >
+            View Cart
+          </button>
         </div>
       </div>
     </div>
